@@ -1,4 +1,4 @@
-package com.TestRestAssuredBarrigaRest;
+package com.TestRestAssuredBarrigaRest.Core;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;

@@ -1,4 +1,4 @@
-package com.TestRestAssuredBarrigaRest;
+package com.TestRestAssuredBarrigaRest.Core;
 
 import io.restassured.http.ContentType;
 
@@ -10,5 +10,5 @@ public interface Constant {
 
     ContentType APP_CONTENT_TYPE = ContentType.JSON;
 
-    Long MAX_TIMEOUT = 1000L;
+    Long MAX_TIMEOUT = 5000L;
 }
