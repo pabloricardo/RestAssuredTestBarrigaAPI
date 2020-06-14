@@ -4,9 +4,12 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import org.hamcrest.Matchers;
+import org.junit.Before;
 import org.junit.BeforeClass;
 
 public class BaseTest implements Constant{
+
+    protected static String TOKEN;
 
     @BeforeClass
     public static void setup(){
@@ -23,6 +26,6 @@ public class BaseTest implements Constant{
         RestAssured.responseSpecification = resBuilder.build();
 
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        TOKEN = UtilsTest.ReturnToken();
     }
-
 }

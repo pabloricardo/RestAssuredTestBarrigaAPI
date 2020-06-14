@@ -11,4 +11,8 @@ public interface Constant {
     ContentType APP_CONTENT_TYPE = ContentType.JSON;
 
     Long MAX_TIMEOUT = 5000L;
+
+    String USER = "test01";
+    String EMAIL = "test01@test01.com";
+    String PASSWORD = "123456";
 }
