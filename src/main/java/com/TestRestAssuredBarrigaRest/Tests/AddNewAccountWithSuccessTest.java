@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class addNewAccountWithSuccessTest extends BaseTest {
+public class AddNewAccountWithSuccessTest extends BaseTest {
 
  @Test
     public void addNewAccountWithSuccess(){

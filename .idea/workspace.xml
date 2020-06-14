@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c79b1793-1d29-4a5b-82e0-99232ba5d5a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Core/UtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/addNewAccountWithSuccessTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/EditAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Core/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Core/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Core/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Core/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/addNewAccountWithSuccessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/AddNewAccountWithSuccessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/doNotAccessWithoutTokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/DoNotAccessWithoutTokenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +34,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.addNewAccountWithSuccessTest.addNewAccountWithSuccess">
-    <configuration name="addNewAccountWithSuccessTest.addNewAccountWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.EditAccountTest.editAccount">
+    <configuration name="AddNewAccountWithSuccessTest.addNewAccountWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredTestBarrigaAPI" />
       <extension name="coverage">
         <pattern>
@@ -46,14 +44,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.TestRestAssuredBarrigaRest.Tests" />
-      <option name="MAIN_CLASS_NAME" value="com.TestRestAssuredBarrigaRest.Tests.addNewAccountWithSuccessTest" />
+      <option name="MAIN_CLASS_NAME" value="com.TestRestAssuredBarrigaRest.Tests.AddNewAccountWithSuccessTest" />
       <option name="METHOD_NAME" value="addNewAccountWithSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="doNotAccessWithoutTokenTest.doNotAccessWithoutToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DoNotAccessWithoutTokenTest.doNotAccessWithoutToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredTestBarrigaAPI" />
       <extension name="coverage">
         <pattern>
@@ -62,8 +60,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.TestRestAssuredBarrigaRest.Tests" />
-      <option name="MAIN_CLASS_NAME" value="com.TestRestAssuredBarrigaRest.Tests.doNotAccessWithoutTokenTest" />
+      <option name="MAIN_CLASS_NAME" value="com.TestRestAssuredBarrigaRest.Tests.DoNotAccessWithoutTokenTest" />
       <option name="METHOD_NAME" value="doNotAccessWithoutToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EditAccountTest.editAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredTestBarrigaAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.TestRestAssuredBarrigaRest.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.TestRestAssuredBarrigaRest.Tests" />
+      <option name="MAIN_CLASS_NAME" value="com.TestRestAssuredBarrigaRest.Tests.EditAccountTest" />
+      <option name="METHOD_NAME" value="editAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,8 +85,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.addNewAccountWithSuccessTest.addNewAccountWithSuccess" />
-        <item itemvalue="JUnit.doNotAccessWithoutTokenTest.doNotAccessWithoutToken" />
+        <item itemvalue="JUnit.EditAccountTest.editAccount" />
+        <item itemvalue="JUnit.AddNewAccountWithSuccessTest.addNewAccountWithSuccess" />
+        <item itemvalue="JUnit.DoNotAccessWithoutTokenTest.doNotAccessWithoutToken" />
       </list>
     </recent_temporary>
   </component>
@@ -102,42 +117,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="235" key="GridCell.Tab.0.bottom" timestamp="1592151840371">
+    <state width="1493" height="371" key="GridCell.Tab.0.bottom" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1591919509833" />
-    <state width="1493" height="235" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592151840371" />
-    <state width="1493" height="235" key="GridCell.Tab.0.center" timestamp="1592151840371">
+    <state width="1493" height="371" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
+    <state width="1493" height="371" key="GridCell.Tab.0.center" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="208" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1591919509833" />
-    <state width="1493" height="235" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592151840371" />
-    <state width="1493" height="235" key="GridCell.Tab.0.left" timestamp="1592151840371">
+    <state width="1493" height="371" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
+    <state width="1493" height="371" key="GridCell.Tab.0.left" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="208" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1591919509833" />
-    <state width="1493" height="235" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592151840371" />
-    <state width="1493" height="235" key="GridCell.Tab.0.right" timestamp="1592151840371">
+    <state width="1493" height="371" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
+    <state width="1493" height="371" key="GridCell.Tab.0.right" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="208" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1591919509833" />
-    <state width="1493" height="235" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592151840371" />
-    <state width="1493" height="371" key="GridCell.Tab.1.bottom" timestamp="1592151715233">
+    <state width="1493" height="371" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
+    <state width="1493" height="371" key="GridCell.Tab.1.bottom" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="371" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592151715233" />
-    <state width="1493" height="371" key="GridCell.Tab.1.center" timestamp="1592151715233">
+    <state width="1493" height="371" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
+    <state width="1493" height="371" key="GridCell.Tab.1.center" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="371" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592151715233" />
-    <state width="1493" height="371" key="GridCell.Tab.1.left" timestamp="1592151715233">
+    <state width="1493" height="371" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
+    <state width="1493" height="371" key="GridCell.Tab.1.left" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="371" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592151715233" />
-    <state width="1493" height="371" key="GridCell.Tab.1.right" timestamp="1592151715233">
+    <state width="1493" height="371" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
+    <state width="1493" height="371" key="GridCell.Tab.1.right" timestamp="1592172839583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="371" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592151715233" />
+    <state width="1493" height="371" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592172839583" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592150409724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -147,14 +162,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/addNewAccountWithSuccessTest.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Tests/AddNewAccountWithSuccessTest.java</url>
           <line>12</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/TestRestAssuredBarrigaRest/Core/BaseTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

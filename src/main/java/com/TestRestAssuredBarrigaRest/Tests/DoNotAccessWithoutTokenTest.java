@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class doNotAccessWithoutTokenTest extends BaseTest {
+public class DoNotAccessWithoutTokenTest extends BaseTest {
 
     @Test
     public void doNotAccessWithoutToken(){
