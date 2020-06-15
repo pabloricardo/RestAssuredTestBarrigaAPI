@@ -10,8 +10,7 @@ import static org.hamcrest.Matchers.*;
 
 public class AddNewMovementTest extends BaseTest {
 
-    @Test
-    public void addNewMovement(){
+    private Movement getValidMovement() {
         Movement movement = new Movement();
         movement.setConta_id(184088);
         movement.setDescricao("Desc movement");
@@ -21,10 +20,28 @@ public class AddNewMovementTest extends BaseTest {
         movement.setData_pagamento("10/05/2010");
         movement.setValor(100f);
         movement.setStatus(true);
+        return movement;
+    }
+
+    @Test
+    public void addNewMovement(){
+        Movement movement = getValidMovement();
 
         given().header("Authorization", "JWT " + TOKEN).body(movement)
                 .when().post("/transacoes")
                 .then().statusCode(201);
+    }
+
+    @Test
+    public void addMovementFutureDate(){
+        Movement movement = getValidMovement();
+        movement.setData_transacao("14/11/2100");
+
+        given().header("Authorization", "JWT " + TOKEN).body(movement)
+                .when().post("/transacoes")
+                .then().statusCode(400)
+                        .body("$", hasSize(1))
+                        .body("msg", hasItem("Data da Movimentação deve ser menor ou igual à data atual"));
     }
 
     @Test
