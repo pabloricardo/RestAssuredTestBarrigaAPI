@@ -23,6 +23,6 @@ public class AddNewMovementTest extends BaseTest {
 
         given().header("Authorization", "JWT " + TOKEN).body(movement)
                 .when().post("/transacoes")
-                .then().statusCode(201).log().all();
+                .then().statusCode(201);
     }
 }
