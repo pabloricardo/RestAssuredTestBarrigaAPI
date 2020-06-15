@@ -68,4 +68,11 @@ public class AddNewMovementTest extends BaseTest {
                 .when().delete("/contas/184088")
                 .then().statusCode(500).body("constraint", is("transacoes_conta_id_foreign"));
     }
+
+    @Test
+    public void calculateSalary(){
+        given().header("Authorization", "JWT " + TOKEN)
+                .when().get("/saldo")
+                .then().statusCode(200).body("find{it.conta_id == 184088}.saldo", is("100.00"));
+    }
 }
