@@ -1,7 +1,5 @@
 package com.TestRestAssuredBarrigaRest.Core;
 
-import com.TestRestAssuredBarrigaRest.Core.BaseTest;
-
 import java.util.HashMap;
 import java.util.Map;
 

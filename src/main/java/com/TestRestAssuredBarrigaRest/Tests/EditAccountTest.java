@@ -1,12 +1,13 @@
 package com.TestRestAssuredBarrigaRest.Tests;
 
 import com.TestRestAssuredBarrigaRest.Core.BaseTest;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 public class EditAccountTest extends BaseTest {
+
     @Test
     public void editAccount(){
 
