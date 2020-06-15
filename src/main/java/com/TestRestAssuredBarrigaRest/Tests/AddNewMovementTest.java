@@ -61,4 +61,11 @@ public class AddNewMovementTest extends BaseTest {
                             "Conta é obrigatório",
                             "Situação é obrigatório"));
     }
+
+    @Test
+    public void doNotRemoveAccountWithMovimetation(){
+        given().header("Authorization", "JWT " + TOKEN)
+                .when().delete("/contas/184088")
+                .then().statusCode(500).body("constraint", is("transacoes_conta_id_foreign"));
+    }
 }
