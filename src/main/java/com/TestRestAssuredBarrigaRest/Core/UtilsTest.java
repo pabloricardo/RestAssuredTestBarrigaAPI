@@ -1,5 +1,8 @@
 package com.TestRestAssuredBarrigaRest.Core;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,5 +20,22 @@ public class UtilsTest implements Constant {
                         .when().post("/signin")
                         .then().statusCode(200).extract().path("token");
         return token;
+    }
+
+    public static int returIdByAccountName(){
+        int id = given().when().get().then().extract().path("id");
+        return id;
+    }
+
+    public static String getDataDifDays(Integer days){
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DAY_OF_MONTH, days);
+        return getDateFormated(cal.getTime());
+    }
+
+    private static String getDateFormated(Date date){
+        String pattern = "yyyy-MM-dd";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        return simpleDateFormat.format(date);
     }
 }

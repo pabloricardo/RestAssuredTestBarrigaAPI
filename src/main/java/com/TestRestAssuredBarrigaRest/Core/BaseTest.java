@@ -4,13 +4,17 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
 public class BaseTest implements Constant{
 
     protected static String TOKEN;
+    protected static String CONTA_NAME;
+    protected static Integer CONTA_ID;
+    protected static Integer MOVEMENT_ID;
 
-    @BeforeAll
+    @BeforeClass
     public static void setup(){
         RestAssured.baseURI = APP_BASE_URL;
         RestAssured.port = APP_PORT;
@@ -26,5 +30,6 @@ public class BaseTest implements Constant{
 
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
         TOKEN = UtilsTest.ReturnToken();
+        CONTA_NAME = "Conta Name" + System.nanoTime();
     }
 }

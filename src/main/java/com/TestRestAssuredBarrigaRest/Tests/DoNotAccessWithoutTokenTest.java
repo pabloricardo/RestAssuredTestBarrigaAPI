@@ -1,7 +1,7 @@
 package com.TestRestAssuredBarrigaRest.Tests;
 
 import com.TestRestAssuredBarrigaRest.Core.BaseTest;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 

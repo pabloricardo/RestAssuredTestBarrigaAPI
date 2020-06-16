@@ -1,9 +1,10 @@
 package com.TestRestAssuredBarrigaRest.Tests;
 
 import com.TestRestAssuredBarrigaRest.Core.BaseTest;
+import com.TestRestAssuredBarrigaRest.Core.UtilsTest;
 import com.TestRestAssuredBarrigaRest.entities.Movement;
-import io.restassured.RestAssured;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -12,12 +13,12 @@ public class AddNewMovementTest extends BaseTest {
 
     private Movement getValidMovement() {
         Movement movement = new Movement();
-        movement.setConta_id(184088);
+        movement.setConta_id(CONTA_ID);
         movement.setDescricao("Desc movement");
         movement.setEnvolvido("Involved movement");
         movement.setTipo("REC");
-        movement.setData_transacao("01/01/2000");
-        movement.setData_pagamento("10/05/2010");
+        movement.setData_transacao(UtilsTest.getDataDifDays(-1));
+        movement.setData_pagamento(UtilsTest.getDataDifDays(5));
         movement.setValor(100f);
         movement.setStatus(true);
         return movement;
@@ -27,15 +28,15 @@ public class AddNewMovementTest extends BaseTest {
     public void addNewMovement(){
         Movement movement = getValidMovement();
 
-        given().header("Authorization", "JWT " + TOKEN).body(movement)
+        MOVEMENT_ID = given().header("Authorization", "JWT " + TOKEN).body(movement)
                 .when().post("/transacoes")
-                .then().statusCode(201);
+                .then().statusCode(201).extract().path("id");
     }
 
     @Test
     public void addMovementFutureDate(){
         Movement movement = getValidMovement();
-        movement.setData_transacao("14/11/2100");
+        movement.setData_transacao(UtilsTest.getDataDifDays(2));
 
         given().header("Authorization", "JWT " + TOKEN).body(movement)
                 .when().post("/transacoes")
@@ -64,8 +65,8 @@ public class AddNewMovementTest extends BaseTest {
 
     @Test
     public void doNotRemoveAccountWithMovimetation(){
-        given().header("Authorization", "JWT " + TOKEN)
-                .when().delete("/contas/184088")
+        given().header("Authorization", "JWT " + TOKEN).pathParam("id", CONTA_ID)
+                .when().delete("/contas/{id}")
                 .then().statusCode(500).body("constraint", is("transacoes_conta_id_foreign"));
     }
 
@@ -73,6 +74,13 @@ public class AddNewMovementTest extends BaseTest {
     public void calculateSalary(){
         given().header("Authorization", "JWT " + TOKEN)
                 .when().get("/saldo")
-                .then().statusCode(200).body("find{it.conta_id == 184088}.saldo", is("100.00"));
+                .then().statusCode(200).body("find{it.conta_id == "+CONTA_ID+"}.saldo", is("100.00"));
+    }
+
+    @Test
+    public void removeTransaction(){
+        given().header("Authorization", "JWT " + TOKEN).pathParam("id", MOVEMENT_ID)
+                .when().delete("/transacoes/{id}")
+                .then().statusCode(204);
     }
 }
